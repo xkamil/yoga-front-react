@@ -1,0 +1,27 @@
+.portal-card {
+    width: 50%;
+    display: inline-block;
+    padding: 5px;
+
+}
+
+.portal-card-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 100%;
+    padding: 10px;
+    font-weight: 600;
+    text-shadow: 0 0 20px #000;
+    font-size: 1.5em;
+    color: #fff;
+    text-decoration: none;
+    background-size: cover;
+}
+
+.portal-card-content:hover{
+    text-decoration: none;
+    color: #fff;
+    opacity: 0.6;
+}
