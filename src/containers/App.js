@@ -16,7 +16,7 @@ class App extends Component {
             portals: []
         };
 
-        fetch(urlLocal)
+        fetch(urlProd)
             .then(resp => resp.json())
             .then(portals => this.setState({...this.state, portals}, () => console.log('updated portals')))
 
