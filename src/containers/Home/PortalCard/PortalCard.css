@@ -1,13 +1,6 @@
-.portal-card {
-    width: 50%;
-    display: inline-block;
-    padding: 5px;
-
-}
-
 .portal-card-content {
     display: flex;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
     height: 300px;
     width: 100%;

@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Text from "../../components/section/Text/index";
+import TextAndImage from "../../components/section/TextAndImage/index";
 
 class Section extends Component {
 
@@ -8,9 +9,8 @@ class Section extends Component {
 
         return (
             <div>
+                <h1>{section.label}</h1>
                 <hr/>
-                <h4>{section.name}</h4>
-                <p>Components: {section.data.length}</p>
                 {this.parseComponents(section.data)}
             </div>)
     }
@@ -20,7 +20,9 @@ class Section extends Component {
         return components.map(component => {
             switch (component.type) {
                 case 'text' :
-                    return <Text content={component.content}/>;
+                    return <Text component={component}/>;
+                case 'text_and_image' :
+                    return <TextAndImage  component={component}/>;
                 default:
                     return <p>Unknown component type: {component.type}</p>
             }

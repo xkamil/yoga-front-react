@@ -10,11 +10,11 @@ const Navbar = (props) => {
     const menuItem = (portalName, sectionName, label) => <li className="nav-link">
         <Link className="nav-link" to={`/${portalName}/${sectionName}`}>{label}</Link></li>;
 
-    const menuItems = sections.map(section=>menuItem(portal.name, section.name, section.label));
+    const menuItems = sections.map(section => menuItem(portal.name, section.name, section.label));
 
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
-
+            <Link className="navbar-brand mb-0 h1" to={`/`}>Yoga</Link>
             <button className="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">

@@ -4,7 +4,7 @@ import './Text.css';
 class Text extends Component {
 
     render() {
-        const {title, lead, text} = this.props.content;
+        const {title, lead, text} = this.props.component.content;
 
         return (
             <div>

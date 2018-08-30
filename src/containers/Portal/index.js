@@ -29,15 +29,22 @@ class Portal extends Component {
         if (portal) {
             renderedPortal = <div className="portal">
                 <div className="portal-top" style={{backgroundImage: `url(${portal.image_top})`}}>
-                    <h1>{portal.label}</h1>
+                    <div className="col-sm-12 col-lg-8 offset-lg-2">
+                        <h1 className="title">{portal.label}</h1>
+                        <Navbar portal={portal}/>
+                    </div>
+
                 </div>
-
-                <Navbar portal={portal}/>
-
-                <Switch>
-                    <Route path={`/${portal.name}/:section`}
-                           render={(props) => <Section section={this.getSectionData(props.match.params.section)}/>}/>
-                </Switch>
+                <div className="row">
+                    <div className="col-sm-12 col-lg-8 offset-lg-2">
+                        <div className="p-3">
+                            <Switch>
+                                <Route path={`/${portal.name}/:section`}
+                                       render={(props) => <Section section={this.getSectionData(props.match.params.section)}/>}/>
+                            </Switch>
+                        </div>
+                    </div>
+                </div>
             </div>
         } else {
             renderedPortal = <p>Loading portal...</p>

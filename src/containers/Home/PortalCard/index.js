@@ -6,11 +6,9 @@ const PortalCard = (props) => {
     const {name, label, image} = props.portal;
 
     return (
-        <div className="portal-card">
-            <Link to={name} className="portal-card-content" style={{backgroundImage: `url(${image})`}}>
-                {label}
-            </Link>
-        </div>
+        <Link to={name}
+              className="portal-card-content justify-content-center"
+              style={{backgroundImage: `url(${image})`}}>{label}</Link>
     );
 };
 
